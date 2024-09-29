@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "index_first_even.h"
-#include "index_last_add.h"
+#include "index_last_odd.h"
 #include "sum_between_even_odd.h"
 #include "sum_before_even_and_after_odd.h"
 
@@ -18,7 +18,7 @@ int main(){
 	len++;
 	}
 
-        if (index_first_even(list, len) == -1 || index_last_add(list, len) == -1){
+        if (index_first_even(list, len) == -1 || index_last_odd(list, len) == -1){
                 printf("Данные некорректны");
 		return 0;
         }
@@ -28,7 +28,7 @@ int main(){
                         printf("%d\n", index_first_even(list, len));
                         break;
                 case 1:
-                        printf("%d\n", index_last_add(list, len));
+                        printf("%d\n", index_last_odd(list, len));
                         break;
                 case 2:
                         printf("%d\n", sum_between_even_odd(list, len));
